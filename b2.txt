@@ -1,0 +1,228 @@
+Last login: Sat Jun 17 01:13:03 on ttys000
+apple@appledeMacBook-Pro ~ % git remote -v
+fatal: not a git repository (or any of the parent directories): .git
+apple@appledeMacBook-Pro ~ % ls
+Desktop				Public
+Documents			Sunlogin Files
+Downloads			VM
+IdeaProjects			VM的副本
+Library				Virtual Machines.localized
+Movies				downloadtemp
+Music				iCloud云盘（归档）
+Pictures
+apple@appledeMacBook-Pro ~ % 
+apple@appledeMacBook-Pro ~ % cd documents
+apple@appledeMacBook-Pro documents % ls
+2023.04.28教务处成绩单		mew
+BaiduNetdiskDownload		password.txt
+Git				sql
+HTML				st luke.pdf
+JDK中文				st luke02.pdf
+NEU				tomcat
+UTD				回国
+classNote课堂笔记		英文
+future				证件照
+iit				个人信息_王鸿飞
+jdk8帮助文档			成绩单翻译20230428.pdf
+jl02				成绩单翻译20230428.xlsx
+apple@appledeMacBook-Pro documents % cd git
+apple@appledeMacBook-Pro git % ls
+itcast		javase08	repo1
+apple@appledeMacBook-Pro git % ls
+itcast		javase08	repo1
+apple@appledeMacBook-Pro git % git clone https://github.com/Edissssssson/repo2.git
+Cloning into 'repo2'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+apple@appledeMacBook-Pro git % ls
+itcast		javase08	repo1		repo2
+apple@appledeMacBook-Pro git % cd repo2
+apple@appledeMacBook-Pro repo2 % ls
+README.md
+apple@appledeMacBook-Pro repo2 % git branch
+* main
+apple@appledeMacBook-Pro repo2 % git branch -r
+  origin/HEAD -> origin/main
+  origin/main
+apple@appledeMacBook-Pro repo2 % git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+apple@appledeMacBook-Pro repo2 % git branch b1
+apple@appledeMacBook-Pro repo2 % git branch b2
+apple@appledeMacBook-Pro repo2 % git branch
+  b1
+  b2
+* main
+apple@appledeMacBook-Pro repo2 % git checkout b1
+Switched to branch 'b1'
+apple@appledeMacBook-Pro repo2 % git branch
+* b1
+  b2
+  main
+apple@appledeMacBook-Pro repo2 % git push origin b1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'b1' on GitHub by visiting:
+remote:      https://github.com/Edissssssson/repo2/pull/new/b1
+remote: 
+To https://github.com/Edissssssson/repo2.git
+ * [new branch]      b1 -> b1
+apple@appledeMacBook-Pro repo2 % git push origin b2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'b2' on GitHub by visiting:
+remote:      https://github.com/Edissssssson/repo2/pull/new/b2
+remote: 
+To https://github.com/Edissssssson/repo2.git
+ * [new branch]      b2 -> b2
+apple@appledeMacBook-Pro repo2 % git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+apple@appledeMacBook-Pro repo2 % git branch
+  b1
+  b2
+* main
+apple@appledeMacBook-Pro repo2 % git add master.txt                
+apple@appledeMacBook-Pro repo2 % git commit -m"master.txt init" master.txt
+[main 73a8baf] master.txt init
+ 1 file changed, 1 insertion(+)
+ create mode 100644 master.txt
+apple@appledeMacBook-Pro repo2 % git push origin  master               
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Edissssssson/repo2.git'
+apple@appledeMacBook-Pro repo2 % git push origin  master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Edissssssson/repo2.git'
+apple@appledeMacBook-Pro repo2 % git
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+apple@appledeMacBook-Pro repo2 % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+apple@appledeMacBook-Pro repo2 % ls                     
+README.md	master.txt
+apple@appledeMacBook-Pro repo2 % git push origin  master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Edissssssson/repo2.git'
+apple@appledeMacBook-Pro repo2 % git push origin  main  
+^[[A^[[A
+^[[A^[[B^[[A
+fatal: unable to access 'https://github.com/Edissssssson/repo2.git/': Could not resolve host: github.com
+apple@appledeMacBook-Pro repo2 % git push origin  master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Edissssssson/repo2.git'
+apple@appledeMacBook-Pro repo2 % git push origin  master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Edissssssson/repo2.git'
+apple@appledeMacBook-Pro repo2 % 
+apple@appledeMacBook-Pro repo2 % git push origin  main  
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 284 bytes | 284.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Edissssssson/repo2.git
+   4235a9b..73a8baf  main -> main
+apple@appledeMacBook-Pro repo2 % git checkout b1
+Switched to branch 'b1'
+apple@appledeMacBook-Pro repo2 % git add b1.txt
+apple@appledeMacBook-Pro repo2 % git commit -m"b1.txt init" b1.txt
+[b1 f49bd37] b1.txt init
+ 1 file changed, 1 insertion(+)
+ create mode 100644 b1.txt
+apple@appledeMacBook-Pro repo2 % git push origin b1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 274 bytes | 274.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Edissssssson/repo2.git
+   4235a9b..f49bd37  b1 -> b1
+apple@appledeMacBook-Pro repo2 % git checkout b2
+Switched to branch 'b2'
+apple@appledeMacBook-Pro repo2 % ls
+README.md			b1.txt.sb-245558ba-sSQ2hg
+apple@appledeMacBook-Pro repo2 % git checkout b2
+Already on 'b2'
+apple@appledeMacBook-Pro repo2 % touch 班
+apple@appledeMacBook-Pro repo2 % touch b2.txt
+apple@appledeMacBook-Pro repo2 % nano b2.txt
+apple@appledeMacBook-Pro repo2 % cat b2.txt
+apple@appledeMacBook-Pro repo2 % cat b2.txt
+apple@appledeMacBook-Pro repo2 % nano b2.txt
+
+  UW PICO 5.09                      File: b2.txt                      Modified  
+
+b2 branch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            [ Unknown Command: ^S ]                             
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Pg   ^K Cut Text  ^C Cur Pos   
+^X Exit      ^J Justify   ^W Where is  ^V Next Pg   ^U UnCut Text^T To Spell  
